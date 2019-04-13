@@ -6,7 +6,7 @@
 
 ### step02 简单统计
 
-请大家使用Python在数据Train上统计下以下指标：
+请大家使用Python在数据Train上统计以下指标：
 1) 在train中总共有多少次广告展现，平均的广告点击率是多少？
 2) 在train中每个site_category的展现次数是多少？
 3) 在train中每个site_category下的device_type各展现了多少次？
