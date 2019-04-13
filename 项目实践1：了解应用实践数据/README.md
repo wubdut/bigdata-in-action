@@ -1,10 +1,10 @@
 ## 实践内容
 
-### Step1 获取数据
+### step01 获取数据
 
 请下载本课程所需要的数据：train.gz，之后在linux系统上可以使用gunzip + filename进行解压。
 
-### Step2 简单统计
+### step02 简单统计
 
 请大家使用Python在数据Train上统计下以下指标：
 1) 在train中总共有多少次广告展现，平均的广告点击率是多少？
