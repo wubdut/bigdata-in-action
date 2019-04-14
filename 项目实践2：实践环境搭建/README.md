@@ -6,8 +6,10 @@
 
 通过VMware创建一个CentOS 7系统，安装CDH后把系统导出成镜像，大家可以通过在VMware的workstation上载入该镜像即可完成安装。
 虚拟机备份文件，直接解压（耗时20分钟）
+![avatar](fig2.3.png)
 
 打开VMware，文件 -> 打开，选择刚刚解压的文件夹，打开文件夹，选择  CentOS 64 位 的克隆.vmx。打开后，VMware中已经出现了centOS 64 位的克隆，之后选择开机即可。
+![avatar](fig2.4.png)
 
 ### 方法二：使用CentOS 7安装
 
