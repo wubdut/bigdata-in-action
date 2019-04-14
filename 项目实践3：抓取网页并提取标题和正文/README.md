@@ -5,11 +5,11 @@
 ### step01抓取网页内容
 
 抓取网页内容的方法很多，这里推荐使用python的requests工具包。相比urllib2或urllib3，requests在接口封装上更加抽象和友好，用户不需要关注太多网络连接底层方面的事情，只需要调用requests提供的高级API即可完成任务。
-安装依赖工具包
+#### 安装依赖工具包
 ```python
 pip3 install requests
 ```
-Reuests工具包介绍
+#### Reuests工具包介绍
 一开始要导入 Requests 模块：
 ```python
 import requests
@@ -49,7 +49,7 @@ url = 'http://httpbin.org/cookies'
 cookies = dict(cookies_are='working')
 r = requests.get(url, cookies=cookies)
 ```
-获取新浪新闻首页
+#### 获取新浪新闻首页
 ```python
 import requests
 url = "https://news.sina.com.cn "
@@ -61,14 +61,14 @@ print(html)
 <Response [200]>
 ```
 
-###step02解析网页内容
+### step02解析网页内容
 
 在step01中，我们可以看到网页是由HTML标签构成的，如果通过字符串匹配或正则表达式的方式去处理文档需要开发大量代码。所幸python提供了不错的工具去解析HTML标签，BeautifulSoup是其中易用性比较高的一种。
 安装依赖工具包
 ```python
 pip3 install beautifulsoup4
 ```
-BeautifulSoup工具包介绍
+#### BeautifulSoup工具包介绍
 使用下面一段HTML：
 ```python
 html_doc = """  
@@ -123,7 +123,7 @@ soup.find(id="link3")
 # <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>
 ```
 
-抓取新浪新闻页面并解析title和提取超链接
+#### 抓取新浪新闻页面并解析title和提取超链接
 ```python
 import requests
 from bs4 import BeautifulSoup
