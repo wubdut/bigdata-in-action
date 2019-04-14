@@ -2,7 +2,7 @@
 
 ### step01 获取数据
 
-请下载本课程所需要的数据：train.gz，之后在linux系统上可以使用gunzip + filename进行解压。
+请下载本课程所需要的数据：train.gz，并拷贝到/data目录下。之后在linux系统上可以使用gunzip + filename进行解压。
 
 ### step02 简单统计
 
