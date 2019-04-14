@@ -1,8 +1,9 @@
 1. 单步调试：
+```console
 head -n 30000 ../../data/train | python3 mapper.py | python3 reducer.py
-
+```
 2. 第一轮mapreduce：
-
+```console
 sudo -u hdfs hadoop jar /opt/cloudera/parcels/CDH-6.1.0-1.cdh6.1.0.p0.770702/lib/hadoop-mapreduce/hadoop-streaming.jar \
 -files mapper.py,reducer.py \
 -mapper mapper.py \
@@ -19,3 +20,4 @@ sudo -u hdfs hadoop jar /opt/cloudera/parcels/CDH-6.1.0-1.cdh6.1.0.p0.770702/lib
 -mapper mapper2.py \
 -reducer reducer2.py \
 -input /exp/kaggle/output3/* -output /exp/kaggle/output4
+```
