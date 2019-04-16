@@ -27,32 +27,32 @@ HDFS Shell提供了HDFS最基础的操作功能，包括查看目录，创建和
 
 #### 切换到hdfs用户
 ```console
-demo@bigdata-in-action:~$su - hdfs
+demo@bigdata-in-action:$ su - hdfs
 ```
 #### 创建目录：mkdir
 ```console
-demo@bigdata-in-action:~$hadoop fs -mkdir /user/hadoop/input
+demo@bigdata-in-action:$ hadoop fs -mkdir /user/hadoop/input
 ```
 #### 上传实验数据到该目录
 ```console
-demo@bigdata-in-action:~$hadoop fs -copyFromLocal ./part-0000* /user/hadoop/input
+demo@bigdata-in-action:$ hadoop fs -copyFromLocal ./part-0000* /user/hadoop/input
 ```
 #### 查看文件并统计行数
 ```console
-demo@bigdata-in-action:~$hadoop fs -cat /user/hadoop/exp/input/part-00000 | less
-demo@bigdata-in-action:~$hadoop fs -cat /user/hadoop/exp/input/part-00000 | wc -l
+demo@bigdata-in-action:$ hadoop fs -cat /user/hadoop/exp/input/part-00000 | less
+demo@bigdata-in-action:$ hadoop fs -cat /user/hadoop/exp/input/part-00000 | wc -l
 ```
 
 ### step04 数据拷贝测试
 #### hadoop fs -cp
 ```console
-demo@bigdata-in-action:~$hadoop fs -mkdir /user/hadoop/exp/test1
-demo@bigdata-in-action:~$hadoop fs -cp /user/hadoop/exp/input/part-*  /user/hadoop/exp/test1
+demo@bigdata-in-action:$ hadoop fs -mkdir /user/hadoop/exp/test1
+demo@bigdata-in-action:$ hadoop fs -cp /user/hadoop/exp/input/part-*  /user/hadoop/exp/test1
 ```
 #### hadoop distcp
 ```console
-demo@bigdata-in-action:~$hadoop fs -mkdir /user/hadoop/exp/test2
-demo@bigdata-in-action:~$hadoop distcp /user/hadoop/exp/input /user/hadoop/exp/test2
+demo@bigdata-in-action:$ hadoop fs -mkdir /user/hadoop/exp/test2
+demo@bigdata-in-action:$ hadoop distcp /user/hadoop/exp/input /user/hadoop/exp/test2
 ```
 distcp是作为一个MapReduce作业来实现的，该复制作业是通过集群中并行运行的map来完成，这里没有reduce过程。每个文件通过一个map进行复制，并且distcp试图为每一个map分配大致相等的数据来执行，即把文件划分为大致相等的块。
 
