@@ -52,7 +52,7 @@ r = requests.get(url, cookies=cookies)
 #### 获取新浪新闻首页
 ```python
 import requests
-url = "https://news.sina.com.cn "
+url = "https://news.sina.com.cn"
 html = requests.get(url)
 print(html) 
 ```
