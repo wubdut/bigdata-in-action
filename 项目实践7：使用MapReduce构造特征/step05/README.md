@@ -5,7 +5,7 @@ head -n 30000 ../../data/train | python3 mapper_pre.py | sort -k1,1 | python3 re
 2. 第一轮mapreduce：
 ```console
 mapred streaming \
--files mapper.py,reducer.py \
+-files mapper_pre.py,reducer_pre.py \
 -mapper mapper_pre.py \
 -reducer reducer_pre.py \
 -input /user/demo/input/* -output /user/demo/output-feature-map
