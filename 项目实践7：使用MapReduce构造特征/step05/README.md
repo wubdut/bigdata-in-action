@@ -43,7 +43,7 @@ hadoop fs -tail /user/demo/output-feature-tmp/part-00000 | python3 mapper2.py | 
 4. 第二轮mapreduce：
 ```console
 mapred streaming \
--files mapper2.py,reducer2.py \
+-files mapper2.py,reducer2.py,dict \
 -mapper mapper2.py \
 -reducer reducer2.py \
 -input /user/demo/output-feature-tmp/* -output /user/demo/output-feature-csv
