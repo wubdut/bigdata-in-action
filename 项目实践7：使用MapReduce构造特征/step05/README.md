@@ -17,6 +17,11 @@ hadoop fs -copyToLocal /user/demo/output-feature-map datamap
 rm datamap/_SUCCESS
 ```
 
+4. 生成字典：
+```console
+python3 dict.py > dict
+```
+
 1. 单步调试：
 ```console
 head -n 30000 ../../data/train | python3 mapper.py | sort -k1,1 | python3 reducer.py
@@ -24,7 +29,7 @@ head -n 30000 ../../data/train | python3 mapper.py | sort -k1,1 | python3 reduce
 2. 第一轮mapreduce：
 ```console
 mapred streaming \
--files mapper.py,reducer.py \
+-files mapper.py,reducer.py,dict \
 -mapper mapper.py \
 -reducer reducer.py \
 -input /user/demo/input/* -output /user/demo/output-feature-tmp
