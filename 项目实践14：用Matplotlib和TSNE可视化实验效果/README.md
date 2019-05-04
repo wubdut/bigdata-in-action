@@ -2,7 +2,7 @@
 
 ### step01 可视化结果CTR预估结果
 
-在机器学习测试一节中本文介绍了AUC指标可以很好的用来衡量点击率预测模型的好坏，我们可以通过ROC曲线判断在一定的FPR（False Positive Rate）的情况下，可以达到多少的TPR（True Positive Rate）。如果可以通过可视化的方式，这个实验效果将更加直观，代码如下：
+在机器学习测试一节中本文介绍了AUC指标可以很好的用来衡量点击率预测模型的好坏，我们可以通过ROC曲线判断在一定的FPR（False Positive Rate）的情况下，可以达到多少的TPR（True Positive Rate）。如果可以通过可视化的方式，这个实验效果将更加直观。
 
 ### step02 通过T-SNE可视化重新理解CTR预估
 
