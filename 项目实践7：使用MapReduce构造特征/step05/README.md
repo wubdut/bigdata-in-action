@@ -13,7 +13,7 @@ mapred streaming \
 
 3. 单步调试：
 ```console
-hdfs dfs -tail /exp/kaggle/output3/part-00000 | python3 mapper2.py | python3 reducer2.py
+hdfs dfs -tail /user/demo/output-feature-csv/part-00000 | python3 mapper2.py | python3 reducer2.py
 ```
 
 4. 第二轮mapreduce：
