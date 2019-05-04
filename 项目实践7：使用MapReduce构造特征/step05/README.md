@@ -1,6 +1,19 @@
 1. 单步调试：
 ```console
-head -n 30000 ../../data/train | python3 mapper.py | python3 reducer.py
+head -n 30000 ../../data/train | python3 mapper_pre.py | sort -k1,1 | python3 reducer_pre.py
+```
+2. 第一轮mapreduce：
+```console
+mapred streaming \
+-files mapper.py,reducer.py \
+-mapper mapper_pre.py \
+-reducer reducer_pre.py \
+-input /user/demo/input/* -output /user/demo/output-feature-map
+```
+
+1. 单步调试：
+```console
+head -n 30000 ../../data/train | python3 mapper.py | sort -k1,1 | python3 reducer.py
 ```
 2. 第一轮mapreduce：
 ```console
