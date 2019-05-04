@@ -1,0 +1,1 @@
+select click, count(*) from ctr_data group by click;
