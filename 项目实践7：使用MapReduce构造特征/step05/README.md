@@ -1,23 +1,45 @@
+1. 预处理单步调试：
+```console
+head -n 30000 ../../data/train | python3 mapper_pre.py | sort -k1,1 | python3 reducer_pre.py
+```
+2. 预处理mapreduce：
+```console
+mapred streaming \
+-files mapper_pre.py,reducer_pre.py \
+-mapper mapper_pre.py \
+-reducer reducer_pre.py \
+-input /user/demo/input/* -output /user/demo/output-feature-map
+```
+
+3. 预处理拷贝：
+```console
+hadoop fs -copyToLocal /user/demo/output-feature-map datamap
+rm datamap/_SUCCESS
+```
+
 1. 单步调试：
 ```console
-head -n 30000 ../../data/train | python3 mapper.py | python3 reducer.py
+head -n 30000 ../../data/train | python3 mapper.py | sort -k1,1 | python3 reducer.py
 ```
 2. 第一轮mapreduce：
 ```console
-sudo -u hdfs hadoop jar /opt/cloudera/parcels/CDH-6.1.0-1.cdh6.1.0.p0.770702/lib/hadoop-mapreduce/hadoop-streaming.jar \
+mapred streaming \
 -files mapper.py,reducer.py \
 -mapper mapper.py \
 -reducer reducer.py \
--input /exp/kaggle/input/* -output /exp/kaggle/output3
+-input /user/demo/input/* -output /user/demo/output-feature-tmp
+```
 
 3. 单步调试：
-hdfs dfs -tail /exp/kaggle/output3/part-00000 | python3 mapper2.py | python3 reducer2.py
+```console
+hadoop fs -tail /user/demo/output-feature-tmp/part-00000 | python3 mapper2.py | python3 reducer2.py
+```
 
 4. 第二轮mapreduce：
-
-sudo -u hdfs hadoop jar /opt/cloudera/parcels/CDH-6.1.0-1.cdh6.1.0.p0.770702/lib/hadoop-mapreduce/hadoop-streaming.jar \
+```console
+mapred streaming \
 -files mapper2.py,reducer2.py \
 -mapper mapper2.py \
 -reducer reducer2.py \
--input /exp/kaggle/output3/* -output /exp/kaggle/output4
+-input /user/demo/output-feature-tmp/* -output /user/demo/output-feature-csv
 ```
