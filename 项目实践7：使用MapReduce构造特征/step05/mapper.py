@@ -21,3 +21,4 @@ for line in sys.stdin:
         print ('%s\t%s' % (keys[11]+','+keys[8]+','+keys[14]+','+keys[9]+','+(today+datetime.timedelta(days=5)).strftime('%Y%m%d')+','+'p7', 1))
         print ('%s\t%s' % (keys[11]+','+keys[8]+','+keys[14]+','+keys[9]+','+(today+datetime.timedelta(days=6)).strftime('%Y%m%d')+','+'p7', 1))
         print ('%s\t%s' % (keys[11]+','+keys[8]+','+keys[14]+','+keys[9]+','+(today+datetime.timedelta(days=7)).strftime('%Y%m%d')+','+'p7', 1))
+
