@@ -51,7 +51,7 @@ hbase(main):043:0> alter 'table_name', '列族'
 ```
 删除列族
 ```console
-hbase(main):043:0> alter 'table_name', {name=>‘列族’, METHOD=>'delete'}
+hbase(main):043:0> alter 'table_name', {name=>'列族', METHOD=>'delete'}
 ```
 
 #### 增加记录
