@@ -4,7 +4,7 @@ head -300000 ../../data/train | python mapper.py | sort -k1,1 | python reducer.p
 ```
 2. 运行
 ```console
-sudo -u hdfs hadoop jar /opt/cloudera/parcels/CDH-6.1.0-1.cdh6.1.0.p0.770702/lib/hadoop-mapreduce/hadoop-streaming.jar \
+mapred streaming \
 -files mapper.py,reducer.py \
 -mapper mapper.py \
 -reducer reducer.py \

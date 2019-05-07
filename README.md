@@ -1,4 +1,4 @@
-# 简介
+## 应用实践简介
 
 本应用实践中，我们根据不同大数据技术把实践内容组织成各个小项目，每个小项目又分成多个步骤。
 
@@ -10,6 +10,10 @@
 项目应用实践使用的数据来源于Kaggle的点击率预测比赛。
 
 比赛地址：https://www.kaggle.com/c/avazu-ctr-prediction
+
+## 应用实践数据
+
+数据下载自：https://www.kaggle.com/c/avazu-ctr-prediction/data
 
 字段描述如下：
 * id

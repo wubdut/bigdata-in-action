@@ -1,4 +1,4 @@
-## 实践内容
+## 项目实践13：使用Matplot对数据进行简单可视化
 
 ### step01 在Jupyter中使用Matplotlib
 

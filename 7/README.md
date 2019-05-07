@@ -1,4 +1,4 @@
-## 实践内容
+## 项目实践7：使用MapReduce构造特征
 
 ### step01 WordCount
 datafile目录中有许多本小说文本，统计出现次数最高的10个单词：

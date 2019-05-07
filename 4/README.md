@@ -1,4 +1,4 @@
-## 实践内容
+## 项目实践4： 通过Kafka进行数据处理
 广告系统产生大量线上展示数据，如果数据直接写入HDFS，Hadoop Session无法承受，而且会严重影响Hadoop性能。因此系统会通过消息中间件作为缓存。本次项目大家需要通过python实现Kafka Producer和Kafka Consumer。
 本实践中，我们模拟一个简单的广告业务数据的收集与处理系统。
 
