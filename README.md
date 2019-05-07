@@ -1,12 +1,37 @@
 # 简介
 
-在《大数据分析与应用实践》第二章中,我们阐述了计算广告对互联网商业模式的重要作用，也简要介绍了计算广告的收费模式和计算方式。
-同时，一个完整的计算广告系统应用了众多大数据技术，可以说开创了大规模利用数据改善产品的先河。
-因此，我们的应用实践也以计算广告为应用背景，选择了计算广告中最核心的点击率预测问题，去探索如何利用大数据技术去解决这个问题。
-在应用实践中，我们根据不同大数据技术把实践内容组织成各个小项目，每个小项目又分成多个步骤。
+本应用实践中，我们根据不同大数据技术把实践内容组织成各个小项目，每个小项目又分成多个步骤。
+
 由此，当我们完成每一个步骤之后，就能初步了解这项技术的特点和应用方式。
+
 当我们完成每一个小项目后，我们基本就已经用大数据技术解决了点击率预测的实际问题。
 
-知识准备：
-#### 1. Linux操作命令。比如进程操作，端口操作等。
-#### 2. python。
+
+项目应用实践使用的数据来源于Kaggle的点击率预测比赛。
+
+比赛地址：https://www.kaggle.com/c/avazu-ctr-prediction
+
+字段描述如下：
+* id
+* click
+* hour
+* C1 -- anonymized categorical variable
+* banner_pos
+* site_id
+* site_domain
+* site_category
+* app_id
+* app_domain
+* app_category
+* device_id
+* device_ip
+* device_model
+* device_type
+* device_conn_type
+* C14-C21 -- anonymized categorical variables
+
+其中，id唯一且每个id对应一次广告展现，click代表了本次广告展现的时候用户是否点击了广告。
+
+hour记录了本次广告的展现时间，格式是YYMMDD，
+
+C1和后面的C14 – C21是数据提供方认为比较重要但不愿意公开含义的字段。
