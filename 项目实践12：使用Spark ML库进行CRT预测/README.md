@@ -1,4 +1,4 @@
-## 实践内容
+## 项目实践12：使用Spark ML库进行CRT预测
 
 ### step01 实现mini-batch gradient descent算法（理解Spark ML对于机器学习的优化原理）
 
