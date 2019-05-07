@@ -9,6 +9,8 @@
 ```console
 spark-submit --executor-memory=512M --master yarn-client train-and-test.py
 ```
-### step03 利用线性回归算法进行CTR预估（直接调用Spark ML的库函数）
+### step03 利用线性回归算法进行CTR预估（直接调用Spark ML的库函数）,提交任务：
 
-直接调用Spark ML的库函数，实现CTR预估。
+```console
+spark-submit --executor-memory=512M --master yarn-client ctr_prediction.py
+```
