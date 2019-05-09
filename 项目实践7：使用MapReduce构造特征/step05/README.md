@@ -22,11 +22,11 @@ rm datamap/_SUCCESS
 python3 dict.py > dict
 ```
 
-1. 单步调试：
+5. 单步调试：
 ```console
 head -n 30000 ../../data/train | python3 mapper.py | sort -k1,1 | python3 reducer.py
 ```
-2. 第一轮mapreduce：
+6. 第一轮mapreduce：
 ```console
 mapred streaming \
 -files mapper.py,reducer.py \
@@ -35,12 +35,12 @@ mapred streaming \
 -input /user/demo/input/* -output /user/demo/output-feature-tmp
 ```
 
-3. 单步调试：
+7. 单步调试：
 ```console
 hadoop fs -tail /user/demo/output-feature-tmp/part-00000 | python3 mapper2.py | python3 reducer2.py
 ```
 
-4. 第二轮mapreduce：
+8. 第二轮mapreduce：
 ```console
 mapred streaming \
 -files mapper2.py,reducer2.py,dict \
